@@ -1,5 +1,5 @@
 // Memilih semua elemen input dan select pada dokumen
-var inputan = document.querySelectorAll("input", "select");
+var inputan = document.querySelectorAll("input, select");
 
 // Mengatur semua elemen input dan select yang dipilih menjadi wajib diisi
 for (var i = 0; i < inputan.length; i++) {
@@ -18,7 +18,12 @@ document.getElementById("regis").addEventListener("submit", function (event) {
 
   // Mengisi objek dengan data form, menggunakan nama input sebagai kunci
   for (var [key, value] of formData.entries()) {
-    formDataSerialized[key] = value;
+    if (key === "Phone Number") {
+      var countryCode = document.getElementById("country-code").value;
+      formDataSerialized[key] = countryCode + value;
+    } else {
+      formDataSerialized[key] = value;
+    }
   }
   console.log(formDataSerialized);
 
