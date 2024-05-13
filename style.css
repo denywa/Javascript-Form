@@ -1,0 +1,44 @@
+/* Mengatur margin, padding, dan border-radius untuk container card */
+.container-card {
+  margin: 30px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Mengatur margin atas, lebar, tinggi, margin kiri dan kanan otomatis, warna latar belakang, dan ketebalan font untuk tombol */
+#button {
+  margin-top: 40px;
+  width: 20%;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+/* Mengatur lebar tombol menjadi 50% ketika lebar layar maksimal 768px */
+@media (max-width: 768px) {
+  #button {
+    width: 50%; 
+  }
+}
+
+/* Mengatur filter kecerahan saat tombol di-hover */
+#button:hover {
+  filter: brightness(78.5%);
+}
+
+/* Mengatur opasitas, border-radius, lebar, margin otomatis, margin atas, dan margin bawah untuk break-line */
+#break-line {
+  opacity: 50%;
+  border-radius: 3.5px;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Mengatur warna latar belakang tabel di dalam displayDiv menjadi transparan */
+#displayDiv table {
+  background-color: transparent; 
+}
